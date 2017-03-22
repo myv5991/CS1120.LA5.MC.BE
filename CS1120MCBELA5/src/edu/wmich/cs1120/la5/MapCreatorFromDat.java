@@ -50,23 +50,11 @@ public class MapCreatorFromDat implements IMapCreator{
 					area[r][c] = new Area(basicEnergyCost, elevation, radiation);
 					
 					//Calculate the next position
-					ExpressionFactory factory = new ExpressionFactory(); //Create necessary objects
-					IOperation addition = new Addition();
-					IOperation subtraction = new Subtraction();
-					
-					fileReader.seek(startPos + 24);	//Read the operator
+					ExpressionFactory factory = new ExpressionFactory();
+					fileReader.seek(startPos + 24);
 					op = fileReader.readChar();
-					
-					fileReader.seek(startPos + 26);	//Read value 1
-					val1 = fileReader.readInt();
-					
-					fileReader.seek(startPos + 30);	//Read value 2
-					val2 = fileReader.readInt();
-					
-					if(op == '+'){
-						
-					}
-						
+					if(op == '+')
+						IOperation addition = new Addition();
 					
 					
 				}
