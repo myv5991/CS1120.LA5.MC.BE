@@ -5,11 +5,11 @@ import edu.wmich.cs1120.la5.gui.MainWindow;
 import edu.wmich.cs1120.la5.TerrainScanner;
 
 import java.io.*;
-import java.util.ArrayList;
 
 public class MapCreatorFromDat implements IMapCreator{
 
 	private IArea area[][] = new Area[10][10];
+	private TerrainScanner scanner = new TerrainScanner();
 	
 	@Override
 	public void scanTerrain(String fileName, int threshold) throws IOException {
@@ -47,7 +47,17 @@ public class MapCreatorFromDat implements IMapCreator{
 					radiation = fileReader.readDouble();
 					
 					//Create the area object
-					area[r][c] = new Area(basicEnergyCost, elevation, radiation);
+					if(elevation >= threshold)
+						area[r][c] = new HighArea(basicEnergyCost, elevation, radiation);
+					
+					if(radiation >= 0.5)
+						area[r][c] = new HighArea(basicEnergyCost, elevation, radiation);
+					
+					if(radiation < 0.5 && elevation > (threshold * 0.5))
+						area[r][c] = new HighArea(basicEnergyCost, elevation, radiation);
+					
+					else
+						area[r][c] = new LowArea(basicEnergyCost, elevation, radiation);
 					
 					//Calculate the next position
 					ExpressionFactory factory = new ExpressionFactory(); //Create necessary objects
@@ -68,12 +78,13 @@ public class MapCreatorFromDat implements IMapCreator{
 		}
 		while(!endOfFile);
 		
+	getScanner().setTerrain(area);
 	}
-
+	
+	
 	@Override
 	public TerrainScanner getScanner() {
-		// TODO Auto-generated method stub
-		return null;
+		return scanner;
 	}
 
 	@Override
