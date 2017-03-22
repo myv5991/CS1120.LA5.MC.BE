@@ -1,6 +1,9 @@
 package edu.wmich.cs1120.la5;
 
 import edu.wmich.cs1120.la5.gui.MainWindow;
+
+import java.io.IOException;
+
 import edu.wmich.cs1120.la5.TerrainScanner;
 
 public class MapCreatorFromTxt implements IMapCreator{
