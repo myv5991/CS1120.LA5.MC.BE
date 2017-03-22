@@ -21,7 +21,11 @@ public class MapCreatorFromTxt implements IMapCreator{
 	private Area[] temp2 = new Area[100];
 	public static TerrainScanner scanner2 = new TerrainScanner();
 	
-	@Override
+	/**
+	 * In this method we are getting two inputs filename and threshold. file name will be a text file and threshold will 
+	 * be an integer value. This method opens the file and places the data in a [10][10] array. This array is an
+	 * array of objects either low or high area based off of the threshold and data provided in the txt.
+	 */
 	public void scanTerrain(String fileName, int threshold) throws IOException {
 
 File filedata = new File(fileName);
@@ -82,13 +86,17 @@ File filedata = new File(fileName);
 		
 	}
 
-	@Override
+/**
+ * Getter for the scanner array. 
+ */
 	public TerrainScanner getScanner() {
-		// TODO Auto-generated method stub
+		
 		return scanner2;
 	}
 
-	@Override
+/**
+ * Setter for the scanner array.
+ */
 	public void setScanner(TerrainScanner scanner) {
 
 		scanner2 = scanner;

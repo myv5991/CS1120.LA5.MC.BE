@@ -62,6 +62,12 @@ public class Area implements IArea{
 		return energy_cost;
 	}
 
+	/**
+	 * This is a constructor class used to set area class for the dat input.
+	 * @param basicEnergyCost double input of energy cost
+	 * @param elevation double input of elevation
+	 * @param radiation double input for radiation
+	 */
 	public Area(double basicEnergyCost, double elevation, double radiation){
 		setBasicEnergyCost(basicEnergyCost);
 		setElevation(elevation);
