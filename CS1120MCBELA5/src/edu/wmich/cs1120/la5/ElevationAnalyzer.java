@@ -8,7 +8,7 @@ import edu.wmich.cs1120.la5.TerrainScanner;
 public class ElevationAnalyzer implements IRover{
 
 	ArrayList<IArea> list;
-	 String analysisLocal;
+	String analysisLocal;
 	
 	@Override
 	public ArrayList<IArea> getPath() {
