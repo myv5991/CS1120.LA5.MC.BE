@@ -22,11 +22,38 @@ public class MapCreatorFromDat implements IMapCreator{
 		
 		//Create necessary variables
 		int pos = 0;
+		int startPos;
+		double basicEnergyCost;
+		double elevation;
+		double radiation;
+		char op;
+		int val1;
+		int val2;
 		
 		do{
 			for(int r = 0; r < area.length; r++)
 				for(int c = 0; c < area[r].length; c++){
-					//area[r][c] = new Area();
+					//Initialize the starting position
+					startPos = pos * 34;
+					
+					//Read the double values into variables
+					fileReader.seek(startPos);
+					basicEnergyCost = fileReader.readDouble();
+					
+					fileReader.seek(startPos + 8);
+					elevation = fileReader.readDouble();
+					
+					fileReader.seek(startPos + 16);
+					radiation = fileReader.readDouble();
+					
+					//Create the area object
+					area[r][c] = new Area(basicEnergyCost, elevation, radiation);
+					
+					//Calculate the next position
+					ExpressionFactory factory = new ExpressionFactory();
+					
+					
+					
 					
 				}
 		}
