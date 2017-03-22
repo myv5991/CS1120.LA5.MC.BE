@@ -1,5 +1,5 @@
 package edu.wmich.cs1120.la5;
 
-public class EnergyAnalyzer {
+public class EnergyAnalyzer implements IRover{
 
 }
