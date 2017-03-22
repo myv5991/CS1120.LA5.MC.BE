@@ -6,11 +6,13 @@ public class BinaryExpression implements IExpression{
 	private char op;
 	
 	public Integer getValue(){
+		Addition addition = new Addition();
+		Subtraction subtraction = new Subtraction();
 		if(getOp() == '+')
-			return getVal1() + getVal2();
+			return addition.add(getVal1(), getVal2());
 		
 		else if (getOp() == '-')
-			return getVal1() - getVal2();
+			return subtraction.subtract(getVal1(), getVal2());
 		
 		else
 			return 0;
