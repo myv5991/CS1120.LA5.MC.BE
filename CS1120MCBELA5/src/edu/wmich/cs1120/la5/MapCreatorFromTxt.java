@@ -16,9 +16,9 @@ public class MapCreatorFromTxt implements IMapCreator{
 
 	private static TerrainScanner inputFile;
 	private Scanner file;
-	public Area[][] Area = new Area[10][10];
-	public Double[][] temp = new Double[100][3];
-	public Area[] temp2 = new Area[100];
+	private Area[][] Area = new Area[10][10];
+	private Double[][] temp = new Double[100][3];
+	private Area[] temp2 = new Area[100];
 	public static TerrainScanner scanner2 = new TerrainScanner();
 	
 	@Override
