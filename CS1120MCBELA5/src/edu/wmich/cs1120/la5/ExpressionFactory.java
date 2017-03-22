@@ -3,7 +3,7 @@ package edu.wmich.cs1120.la5;
 public class ExpressionFactory {
 	public IExpression getExpression(char op, int val1, int val2){
 		
-		IOperation opVar;
+		IOperation opVar = null;
 		
 		if(op == '+'){
 			opVar = new Addition();

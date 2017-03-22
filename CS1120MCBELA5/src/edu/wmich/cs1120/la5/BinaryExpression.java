@@ -3,20 +3,41 @@ package edu.wmich.cs1120.la5;
 public class BinaryExpression implements IExpression{
 	private IExpression left;
 	private IExpression right;
-	private char op;
+	private IOperation op;
 	
 	public Integer getValue(){
-		return 1;
+		return getOp().perform(left, right);
 	}
 	
-	public char getOp(){
-		return this.op;
+	public IOperation getOp(){
+		return op;
 	}
 	
-	public void setOp(char op){
+	public void setOp(IOperation op){
 		this.op = op;
 	}
-	public BinaryExpression(char op, int val1, int val2){
+	
+	public IExpression getLeft(){
+		return left;
+	}
+	
+	public void setLeft(IExpression left){
+		this.left = left;
+	}
+	
+	public void setRight(IExpression right){
+		this.right = right;
+	}
+	
+	public IExpression getRight(){
+		return right;
+	}
+	
+	public BinaryExpression(IOperation op, IExpression left, IExpression right){
+		setLeft(left);
+		setRight(right);
 		setOp(op);
 	}
+	
+	
 }
