@@ -1,5 +1,16 @@
 package edu.wmich.cs1120.la5;
 
-public class LowArea {
+import edu.wmich.cs1120.la5.gui.MainWindow;
+import edu.wmich.cs1120.la5.TerrainScanner;
 
+public class LowArea extends Area{
+
+	/**
+	 * Calculates energy cost of low points
+	 */
+	public double calcConsumedEnergy() {
+		double energy_cost = this.getBasicEnergyCost() * 2;
+		return energy_cost;
+	}
+	
 }
