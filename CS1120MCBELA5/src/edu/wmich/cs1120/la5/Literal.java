@@ -1,12 +1,16 @@
 package edu.wmich.cs1120.la5;
 
 public class Literal implements IExpression{
-	int val;
+	private int val;
+	
 	public Integer getValue(){
-		return this.val;
+		return val;
 	}
 	
-	public Literal(int val){
+	public void setValue(int val){
 		this.val = val;
+	}
+	public Literal(int val){
+		setValue(val);
 	}
 }
