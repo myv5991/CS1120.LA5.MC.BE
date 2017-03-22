@@ -6,33 +6,7 @@ public class BinaryExpression implements IExpression{
 	private char op;
 	
 	public Integer getValue(){
-		Addition addition = new Addition();
-		Subtraction subtraction = new Subtraction();
-		if(getOp() == '+')
-			return addition.add(getVal1(), getVal2());
-		
-		else if (getOp() == '-')
-			return subtraction.subtract(getVal1(), getVal2());
-		
-		else
-			return 0;
-		
-	}
-
-	public int getVal1() {
-		return val1;
-	}
-
-	public void setVal1(int val1) {
-		this.val1 = val1;
-	}
-
-	public int getVal2() {
-		return val2;
-	}
-
-	public void setVal2(int val2) {
-		this.val2 = val2;
+		return 1;
 	}
 	
 	public char getOp(){
@@ -44,7 +18,5 @@ public class BinaryExpression implements IExpression{
 	}
 	public BinaryExpression(char op, int val1, int val2){
 		setOp(op);
-		setVal1(val1);
-		setVal2(val2);
 	}
 }
