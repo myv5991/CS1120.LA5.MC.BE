@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="LA5_GUI.jar"/>
 	<classpathentry kind="lib" path="LA5_TerrainScanner.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Michael/Dropbox/College/WMU 2016-2017 (Spring)/CS1120 Comp Sci 2/LA5/ProvidedFiles/LA5_GUI.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
