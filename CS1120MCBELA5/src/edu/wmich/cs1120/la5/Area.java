@@ -62,4 +62,9 @@ public class Area implements IArea{
 		return energy_cost;
 	}
 
+	public Area(double basicEnergyCost, double elevation, double radiation){
+		setBasicEnergyCost(basicEnergyCost);
+		setElevation(elevation);
+		setRadiation(radiation);
+	}
 }

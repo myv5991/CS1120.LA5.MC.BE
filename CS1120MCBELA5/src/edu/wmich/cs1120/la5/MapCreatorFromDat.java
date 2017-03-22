@@ -14,14 +14,21 @@ public class MapCreatorFromDat implements IMapCreator{
 	@Override
 	public void scanTerrain(String fileName, int threshold) throws IOException {
 		//Create objects for binary file read
-		FileInputStream fileIn = new FileInputStream(fileName);
-		DataInputStream fileReader = new DataInputStream(fileIn);
+		File file = new File(fileName);
+		RandomAccessFile fileReader = new RandomAccessFile(file, "r");
 		
 		//Create boolean flag
 		boolean endOfFile = false;
 		
+		//Create necessary variables
+		int pos = 0;
+		
 		do{
-			
+			for(int r = 0; r < area.length; r++)
+				for(int c = 0; c < area[r].length; c++){
+					//area[r][c] = new Area();
+					
+				}
 		}
 		while(!endOfFile);
 		
