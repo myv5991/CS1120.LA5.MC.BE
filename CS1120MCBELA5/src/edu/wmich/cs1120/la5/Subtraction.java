@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 package edu.wmich.cs1120.la5;
 
 public class Subtraction implements IOperation{
@@ -16,4 +14,4 @@ public class Subtraction implements IOperation{
 	}
 
 }
->>>>>>> branch 'master' of https://github.com/myv5991/CS1120.LA5.MC.BE
+
