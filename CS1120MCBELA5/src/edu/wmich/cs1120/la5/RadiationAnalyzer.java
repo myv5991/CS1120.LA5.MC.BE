@@ -39,5 +39,8 @@ public class RadiationAnalyzer implements IRover{
 		// TODO Auto-generated method stub
 		
 	}
+	public String toString(){
+		return "Radiation";
+	}
 
 }
