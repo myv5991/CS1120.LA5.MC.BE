@@ -1,8 +1,8 @@
 package edu.wmich.cs1120.la5;
 
 public class BinaryExpression implements IExpression{
-	private int val1;
-	private int val2;
+	private IExpression left;
+	private IExpression right;
 	private char op;
 	
 	public Integer getValue(){

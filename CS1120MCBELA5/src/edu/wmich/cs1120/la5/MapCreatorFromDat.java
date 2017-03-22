@@ -51,8 +51,10 @@ public class MapCreatorFromDat implements IMapCreator{
 					
 					//Calculate the next position
 					ExpressionFactory factory = new ExpressionFactory();
-					
-					
+					fileReader.seek(startPos + 24);
+					op = fileReader.readChar();
+					if(op == '+')
+						IOperation addition = new Addition();
 					
 					
 				}
