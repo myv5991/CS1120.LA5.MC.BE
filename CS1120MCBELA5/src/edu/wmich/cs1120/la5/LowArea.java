@@ -5,6 +5,11 @@ import edu.wmich.cs1120.la5.TerrainScanner;
 
 public class LowArea extends Area{
 
+	public LowArea(double basicEnergyCost, double elevation, double radiation) {
+		super(basicEnergyCost, elevation, radiation);
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * Calculates energy cost of low points
 	 */
@@ -13,4 +18,5 @@ public class LowArea extends Area{
 		return energy_cost;
 	}
 	
+
 }

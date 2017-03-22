@@ -29,7 +29,7 @@ public class EnergyAnalyzer implements IRover{
 		double totalenergy = 0;
 		
 		for(int i = 0; i < list.size(); i++){
-			IArea temp = new Area();
+			IArea temp = new Area(0,0,0);
 			temp = list.get(i);
 		totalenergy = totalenergy + temp.calcConsumedEnergy();	
 		}
