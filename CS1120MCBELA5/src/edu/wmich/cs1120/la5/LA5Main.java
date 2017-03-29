@@ -1,3 +1,9 @@
+/*
+ *Assignment: CS1120 LA5_SP2017
+ *Author: Michael Callaway & Ben
+ *Date: March 29, 2017
+ *Reference: N/A
+ */
 package edu.wmich.cs1120.la5;
 
 import edu.wmich.cs1120.la5.gui.MainWindow;
