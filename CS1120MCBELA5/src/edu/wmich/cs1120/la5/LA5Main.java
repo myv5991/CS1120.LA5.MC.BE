@@ -1,6 +1,6 @@
 /*
  *Assignment: CS1120 LA5_SP2017
- *Author: Michael Callaway & Ben
+ *Author: Michael Callaway & Benjamin Eckert
  *Date: March 29, 2017
  *Reference: N/A
  */
