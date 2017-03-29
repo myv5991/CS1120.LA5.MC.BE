@@ -5,6 +5,12 @@ import edu.wmich.cs1120.la5.TerrainScanner;
 
 public class HighArea extends Area{
 	
+	/**
+	 * constructors for the high area.
+	 * @param basicEnergyCost stores energy cost
+	 * @param elevation stores elevation
+	 * @param radiation stores radiation
+ 	 */
 	public HighArea(double basicEnergyCost, double elevation, double radiation) {
 		super(basicEnergyCost, elevation, radiation);
 		// TODO Auto-generated constructor stub

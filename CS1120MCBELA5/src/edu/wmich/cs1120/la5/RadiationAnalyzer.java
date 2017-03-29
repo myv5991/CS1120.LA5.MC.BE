@@ -10,12 +10,17 @@ public class RadiationAnalyzer implements IRover{
 	ArrayList<IArea> list;
 	 String analysisLocal;
 	
+		/**
+		 * gets the array list of the path created by the jar file.
+		 */
 	@Override
 	public ArrayList<IArea> getPath() {
 		// TODO Auto-generated method stub
 		return list;
 	}
-
+	/**
+	 * setter for the path arraylist.
+	 */
 	@Override
 	public void setPath(ArrayList<IArea> path) {
 
@@ -24,6 +29,9 @@ public class RadiationAnalyzer implements IRover{
 		
 	}
 
+	/**
+	 * processes the total radiation and sets it to the analysis variable
+	 */
 	@Override
 	public void analyzePath() {
 		double totalradiation = 0;
@@ -37,17 +45,26 @@ public class RadiationAnalyzer implements IRover{
 		analysisLocal = Double.toString(totalradiation);
 	}
 
+	/**
+	 * getter for analysis var
+	 */
 	@Override
 	public String getAnalysis() {
 		// TODO Auto-generated method stub
 		return analysisLocal;
 	}
 
+	/**
+	 * setter for analysis var
+	 */
 	@Override
 	public void setAnalysis(String analysis) {
 		analysisLocal = analysis;
 		
 	}
+	/**
+	 * returns name of analyzer
+	 */
 	public String toString(){
 		return "RadiationAnalyzer";
 	}

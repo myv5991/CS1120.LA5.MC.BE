@@ -12,6 +12,13 @@ public class MapCreatorFromDat implements IMapCreator{
 	private TerrainScanner scanner = new TerrainScanner();
 	
 	@Override
+	/**
+	 * In scanTerrain this method gets the inputs from user of the name of the dat file and the threshold.
+	 * it then opens the file via randomaccessfile and parses out the data. since it is in an encrypted form
+	 * it makes use of the expression objects to obtain the left and right integers and operator to calcuate the 
+	 * integer value. Fill it fills a 10x10 array with area objects that contain high or low area objects depending 
+	 * on the conditions of the values.
+	 */
 	public void scanTerrain(String fileName, int threshold) throws IOException {
 		//Create objects for binary file read
 		File file = new File(fileName);
@@ -83,20 +90,33 @@ public class MapCreatorFromDat implements IMapCreator{
 	
 	
 	@Override
+	/**
+	 * getter for the scanner object
+	 */
 	public TerrainScanner getScanner() {
 		return scanner;
 	}
 
 	@Override
+	/**
+	 * setter for the scanner object
+	 */
 	public void setScanner(TerrainScanner scanner) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	/**
+	 * getter for the area array object.
+	 * @return
+	 */
 	public IArea[][] getArea() {
 		return area;
 	}
-
+/**
+ * setter for the area array object.
+ * @param area
+ */
 	public void setArea(IArea area[][]) {
 		this.area = area;
 	}
